@@ -1,15 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+
+import {LoginFormDto} from '../dto/LogonFormDto';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
-  constructor() { }
+  logFormDto = new LoginFormDto('', '');
 
-  ngOnInit(): void {
+  errorMessage = '';
+
+  constructor() {
+  }
+
+  onSubmit() {
   }
 
 }
