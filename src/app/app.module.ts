@@ -11,15 +11,15 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent
-  ],
   imports: [
     FormsModule,
     BrowserModule,
     RouterModule,
     RouterModule.forRoot(appRoutes)
+  ],
+  declarations: [
+    AppComponent,
+    LoginComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
