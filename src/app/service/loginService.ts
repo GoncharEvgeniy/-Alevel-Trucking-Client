@@ -6,16 +6,17 @@ import {JwtHelperService} from '@auth0/angular-jwt';
 
 import {LoginFormDto} from '../dto/LogonFormDto';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class LoginService {
   private url = 'http://localhost:8080/Server/login';
 
-  private contentHeader = new HttpHeaders({ 'Content-Type': 'application/json' });
+  private contentHeader = new HttpHeaders({'Content-Type': 'application/json'});
 
-  constructor(private httpClient: HttpClient, private router: Router, private storage: LocalStorageService) { }
+  constructor(private httpClient: HttpClient, private router: Router, private storage: LocalStorageService) {
+  }
 
   login(loginFormDto: LoginFormDto) {
-    return this.httpClient.post<any>(this.url, loginFormDto, { headers: this.contentHeader, observe: 'response' });
+    return this.httpClient.post<any>(this.url, loginFormDto, {headers: this.contentHeader, observe: 'response'});
   }
 
   isAuthenticated(): boolean {
