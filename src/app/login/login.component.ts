@@ -30,7 +30,7 @@ export class LoginComponent {
         this.router.navigateByUrl('/');
       },
       (error) => {
-        if (error.statusText == "Unauthorized") {
+        if (error.error.error === "Unauthorized") {
           this.errorMessage = "bad login or password";
         }
       });
