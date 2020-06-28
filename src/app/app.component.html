@@ -5,7 +5,7 @@
 <div>
   <h4>
     <nav>
-      <a routerLink="/login" routerLinkActive="active"> Login </a>
+      <a *ngIf="!loginService.isAuthenticated()" routerLink="/login" routerLinkActive="active"> Login </a>
     </nav>
   </h4>
 </div>
