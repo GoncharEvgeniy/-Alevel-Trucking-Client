@@ -8,9 +8,11 @@ import {DatePipe} from '@angular/common';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {JwtInterseptor} from "./service/jwtInterceptor";
 import {NgxWebstorageModule} from 'ngx-webstorage';
+import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({
@@ -24,7 +26,8 @@ const appRoutes: Routes = [
   ],
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   providers: [DatePipe, {provide: HTTP_INTERCEPTORS, useClass: JwtInterseptor, multi: true}],
   bootstrap: [AppComponent]
