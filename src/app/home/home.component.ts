@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {LoginService} from "../service/loginService";
 import {User} from "../dto/User";
 import {AdminService} from "../service/admin/adminService";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit {
 
   adminService: AdminService;
 
-  users: User[];
+  users: Observable<User[]>;
 
   constructor(loginService: LoginService, adminService : AdminService) {
     this.loginService = loginService;
