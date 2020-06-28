@@ -28,9 +28,17 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.username = this.loginService.getUserName();
-    this.userrole = this.loginService.getRole();
-    this.users = this.adminService.getUsers();
+    if (this.loginService.isAuthenticated()) {
+      this.username = this.loginService.getUserName();
+      this.userrole = this.loginService.getRole();
+      if (this.isAdmin()) {
+        this.users = this.adminService.getUsers();
+      }
+    }
+  }
+
+  isAdmin(): boolean {
+    return this.userrole === 'admin';
   }
 
 }

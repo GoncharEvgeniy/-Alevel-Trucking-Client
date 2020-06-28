@@ -2,7 +2,7 @@
   <p>Hello {{userrole}} {{username}}</p>
 </h1>
 
-<div>
+<div *ngIf="isAdmin()">
   <h2>Users</h2>
   <table class="table table-bordered table-sm table-striped">
     <thead>
