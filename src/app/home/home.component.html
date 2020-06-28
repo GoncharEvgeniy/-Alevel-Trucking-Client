@@ -1,1 +1,27 @@
-<p>home works!</p>
+<h1>
+  <p>Hello {{userrole}} {{username}}</p>
+</h1>
+
+<div>
+  <h2>Users</h2>
+  <table class="table table-bordered table-sm table-striped">
+    <thead>
+    <tr>
+      <th>Login</th>
+      <th>FirstName</th>
+      <th>LastName</th>
+      <th>Role</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.login}}</td>
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.role}}</td>
+      <td>1</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -11,7 +11,8 @@ import {NgxWebstorageModule} from 'ngx-webstorage';
 import { HomeComponent } from './home/home.component';
 
 const appRoutes: Routes = [
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'home', component: HomeComponent}
 ];
 
 @NgModule({
