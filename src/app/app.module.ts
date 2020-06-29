@@ -9,6 +9,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {JwtInterseptor} from "./service/jwtInterceptor";
 import {NgxWebstorageModule} from 'ngx-webstorage';
 import { HomeComponent } from './home/home.component';
+import {ConfirmationPopoverModule} from "angular-confirmation-popover";
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -22,7 +23,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule,
     RouterModule.forRoot(appRoutes),
-    NgxWebstorageModule.forRoot()
+    NgxWebstorageModule.forRoot(),
+    ConfirmationPopoverModule.forRoot({ confirmButtonType: 'danger' })
   ],
   declarations: [
     AppComponent,
