@@ -4,12 +4,17 @@
 
 <div *ngIf="isAdmin()">
   <h2>Users</h2>
+  <button type="button" class="btn btn-warning btn-sm">Add Manager</button>
+  <button type="button" class="btn btn-warning btn-sm">Add Driver</button>
   <table class="table table-bordered table-sm table-striped">
     <thead>
     <tr>
       <th>Login</th>
       <th>FirstName</th>
+      <th>SecondName</th>
       <th>LastName</th>
+      <th>Phone</th>
+      <th>Email</th>
       <th>Role</th>
       <th>Action</th>
     </tr>
@@ -18,9 +23,15 @@
     <tr *ngFor="let user of users | async">
       <td>{{user.login}}</td>
       <td>{{user.firstName}}</td>
+      <td>{{user.secondName}}</td>
       <td>{{user.lastName}}</td>
+      <td>{{user.phone}}</td>
+      <td>{{user.email}}</td>
       <td>{{user.role}}</td>
-      <td>1</td>
+      <td>
+        <button type="button" class="btn btn-warning btn-sm">Edit</button>
+        <button *ngIf="user.role !== 'admin'" type="button" class="btn btn-danger btn-sm">Delete</button>
+      </td>
     </tr>
     </tbody>
   </table>
