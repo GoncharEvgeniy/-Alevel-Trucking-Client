@@ -1,6 +1,7 @@
 export class User {
 
   constructor(
+    public id: bigint,
     public login: string,
     public firstName: string,
     public secondName: string,

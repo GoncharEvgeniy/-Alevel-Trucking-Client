@@ -29,7 +29,8 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule,
     RouterModule.forRoot(appRoutes),
-    NgxWebstorageModule.forRoot()
+    NgxWebstorageModule.forRoot(),
+    ConfirmationPopoverModule.forRoot({ confirmButtonType: 'danger' })
   ],
   declarations: [
     AppComponent,
