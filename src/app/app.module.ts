@@ -10,6 +10,7 @@ import {JwtInterceptor} from "./service/jwtInterceptor";
 import {NgxWebstorageModule} from 'ngx-webstorage';
 import { HomeComponent } from './home/home.component';
 import {ConfirmationPopoverModule} from "angular-confirmation-popover";
+import { AddManagerComponent } from './home/add-manager/add-manager.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent
+    HomeComponent,
+    AddManagerComponent
   ],
   providers: [DatePipe, {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}],
   bootstrap: [AppComponent]
