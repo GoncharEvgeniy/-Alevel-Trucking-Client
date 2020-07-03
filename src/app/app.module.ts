@@ -6,9 +6,10 @@ import {AppComponent} from './app.component';
 import {LoginComponent} from './login/login.component';
 import {DatePipe} from '@angular/common';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
-import {JwtInterseptor} from "./service/jwtInterceptor";
+import {JwtInterceptor} from "./service/jwtInterceptor";
 import {NgxWebstorageModule} from 'ngx-webstorage';
 import { HomeComponent } from './home/home.component';
+import {ConfirmationPopoverModule} from "angular-confirmation-popover";
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -22,14 +23,15 @@ const appRoutes: Routes = [
     HttpClientModule,
     RouterModule,
     RouterModule.forRoot(appRoutes),
-    NgxWebstorageModule.forRoot()
+    NgxWebstorageModule.forRoot(),
+    ConfirmationPopoverModule.forRoot({ confirmButtonType: 'danger' })
   ],
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent
   ],
-  providers: [DatePipe, {provide: HTTP_INTERCEPTORS, useClass: JwtInterseptor, multi: true}],
+  providers: [DatePipe, {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule {
