@@ -10,7 +10,7 @@ import {JwtInterceptor} from "./service/jwtInterceptor";
 import {NgxWebstorageModule} from 'ngx-webstorage';
 import { HomeComponent } from './home/home.component';
 import {ConfirmationPopoverModule} from "angular-confirmation-popover";
-import { AddManagerComponent } from './home/add-manager/add-manager.component';
+import { AddManagerComponent } from './add-manager/add-manager.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
