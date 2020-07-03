@@ -22,14 +22,6 @@ export class HomeComponent implements OnInit {
 
   users: Observable<User[]>;
 
-  popoverTitle = 'Deleting user confirmation';
-
-  popoverMessage = 'Are you sure?';
-
-  errorMessage = '';
-
-  cancelClicked: boolean;
-
   constructor(loginService: LoginService, adminService : AdminService) {
     this.loginService = loginService;
     this.adminService = adminService;
@@ -43,10 +35,6 @@ export class HomeComponent implements OnInit {
         this.users = this.adminService.getUsers();
       }
     }
-  }
-
-  deleteUser(userId: bigint) {
-    console.log(userId);
   }
 
   isAdmin(): boolean {
