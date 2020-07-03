@@ -4,7 +4,7 @@ import {HttpRequest, HttpHandler, HttpInterceptor} from '@angular/common/http';
 import {LoginService} from './loginService';
 
 @Injectable()
-export class JwtInterseptor implements HttpInterceptor {
+export class JwtInterceptor implements HttpInterceptor {
 
   constructor(private injector: Injector) {
   }
