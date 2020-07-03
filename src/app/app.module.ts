@@ -16,7 +16,10 @@ import { RegistrationComponent } from './registration/registration.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: 'home', component: HomeComponent}
+  {path: 'home', component: HomeComponent},
+  {path: 'registration', component: RegistrationComponent},
+  {path: 'add-driver', component: AddDriverComponent},
+  {path: 'add-manager', component: AddManagerComponent}
 ];
 
 @NgModule({
