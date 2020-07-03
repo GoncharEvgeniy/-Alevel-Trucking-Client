@@ -11,6 +11,7 @@
       <a *ngIf="loginService.isAuthenticated()" routerLink="/add-manager" routerLinkActive="active"> Add Manager |</a>
       <a *ngIf="!loginService.isAuthenticated()" routerLink="/login" routerLinkActive="active"> Login |</a>
       <a *ngIf="!loginService.isAuthenticated()" routerLink="/registration" routerLinkActive="active"> Registration |</a>
+      <a *ngIf="loginService.isAuthenticated()" routerLink="/logout" (click)=logout() routerLinkActive="active"> Logout |</a>
     </nav>
   </h4>
 </div>
