@@ -11,6 +11,7 @@ import {NgxWebstorageModule} from 'ngx-webstorage';
 import { HomeComponent } from './home/home.component';
 import {ConfirmationPopoverModule} from "angular-confirmation-popover";
 import { AddManagerComponent } from './add-manager/add-manager.component';
+import { AddDriverComponent } from './add-driver/add-driver.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    AddManagerComponent
+    AddManagerComponent,
+    AddDriverComponent
   ],
   providers: [DatePipe, {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}],
   bootstrap: [AppComponent]
