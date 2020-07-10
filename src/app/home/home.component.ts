@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {LoginService} from "../service/loginService";
 import {User} from "../dto/User";
 import {AdminService} from "../service/admin/adminService";
@@ -22,7 +22,15 @@ export class HomeComponent implements OnInit {
 
   users: Observable<User[]>;
 
-  constructor(loginService: LoginService, adminService : AdminService) {
+  popoverTitle = 'Deleting user confirmation';
+
+  popoverMessage = 'Are you sure?';
+
+  errorMessage = '';
+
+  cancelClicked: boolean;
+
+  constructor(loginService: LoginService, adminService: AdminService) {
     this.loginService = loginService;
     this.adminService = adminService;
   }
@@ -35,6 +43,10 @@ export class HomeComponent implements OnInit {
         this.users = this.adminService.getUsers();
       }
     }
+  }
+
+  deleteUser(userId: bigint) {
+    console.log(userId);
   }
 
   isAdmin(): boolean {

@@ -1,6 +1,6 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { AddDriverComponent } from './add-driver.component';
+import {AddDriverComponent} from './add-driver.component';
 
 describe('AddDriverComponent', () => {
   let component: AddDriverComponent;
@@ -8,9 +8,9 @@ describe('AddDriverComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddDriverComponent ]
+      declarations: [AddDriverComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
