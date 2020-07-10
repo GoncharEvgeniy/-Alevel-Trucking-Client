@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ManagerForm} from "../dto/ManagerForm";
 
 @Component({
   selector: 'app-add-manager',
@@ -7,10 +8,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AddManagerComponent implements OnInit {
 
+  addManagerForm = new ManagerForm("", "", "", "", "", "", "", "", "");
+
   constructor() {
   }
 
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    console.log(this.addManagerForm);
+  }
 }

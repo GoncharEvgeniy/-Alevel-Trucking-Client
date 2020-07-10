@@ -1,46 +1,81 @@
 <h2>Add new manager</h2>
 <div>
-  <form class="container">
+  <form class="container" (ngSubmit)="onSubmit()">
     <div class="row">
       <div class="form-group col-4">
         <label for="userName">Username</label>
-        <input type="text" id="userName" class="form-control">
+        <input type="text" id="userName"
+               name="userName"
+               class="form-control"
+               [(ngModel)]="addManagerForm.username">
       </div>
       <div class="form-group col-4">
         <label for="password">Password</label>
-        <input id="password" class="form-control">
+        <input type="password"
+               id="password"
+               name="password"
+               class="form-control"
+               [(ngModel)]="addManagerForm.password">
       </div>
       <div class="form-group col-4">
         <label for="email">Email</label>
-        <input id="email" class="form-control">
+        <input type="text"
+               id="email"
+               name="email"
+               class="form-control"
+               [(ngModel)]="addManagerForm.email">
       </div>
     </div>
     <div class="row">
       <div class="form-group col-4">
         <label for="firstName">First name</label>
-        <input id="firstName" class="form-control">
+        <input type="text"
+               id="firstName"
+               name="firstName"
+               class="form-control"
+               [(ngModel)]="addManagerForm.firstName">
       </div>
       <div class="form-group col-4">
         <label for="secondName">Second name</label>
-        <input id="secondName" class="form-control">
+        <input type="text"
+               id="secondName"
+               name="secondName"
+               class="form-control"
+               [(ngModel)]="addManagerForm.secondName">
       </div>
       <div class="form-group col-4">
         <label for="lastName">Last name</label>
-        <input id="lastName" class="form-control">
+        <input type="text"
+               id="lastName"
+               name="lastName"
+               class="form-control"
+               [(ngModel)]="addManagerForm.lastName">
       </div>
     </div>
     <div class="row">
       <div class="form-group col-4">
         <label for="phone">Phone</label>
-        <input id="phone" class="form-control">
+        <input type="text"
+               id="phone"
+               name="phone"
+               class="form-control"
+               [(ngModel)]="addManagerForm.phone">
       </div>
       <div class="form-group col-4">
         <label for="birthday">Birthday</label>
-        <input id="birthday" class="form-control">
+        <input type="text"
+               id="birthday"
+               name="birthday"
+               class="form-control"
+               [(ngModel)]="addManagerForm.birthday">
       </div>
       <div class="form-group col-4">
         <label for="startWork">Date of start work</label>
-        <input id="startWork" class="form-control">
+        <input type="text"
+               id="startWork"
+               name="startWork"
+               class="form-control"
+               [(ngModel)]="addManagerForm.startWork">
       </div>
     </div>
     <button type="submit" class="btn btn-success">Submit</button>
