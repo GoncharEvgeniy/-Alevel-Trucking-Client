@@ -8,11 +8,11 @@ import {DatePipe} from '@angular/common';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {JwtInterceptor} from "./service/jwtInterceptor";
 import {NgxWebstorageModule} from 'ngx-webstorage';
-import { HomeComponent } from './home/home.component';
+import {HomeComponent} from './home/home.component';
 import {ConfirmationPopoverModule} from "angular-confirmation-popover";
-import { AddManagerComponent } from './add-manager/add-manager.component';
-import { AddDriverComponent } from './add-driver/add-driver.component';
-import { RegistrationComponent } from './registration/registration.component';
+import {AddManagerComponent} from './add-manager/add-manager.component';
+import {AddDriverComponent} from './add-driver/add-driver.component';
+import {RegistrationComponent} from './registration/registration.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
@@ -30,7 +30,7 @@ const appRoutes: Routes = [
     RouterModule,
     RouterModule.forRoot(appRoutes),
     NgxWebstorageModule.forRoot(),
-    ConfirmationPopoverModule.forRoot({ confirmButtonType: 'danger' })
+    ConfirmationPopoverModule.forRoot({confirmButtonType: 'danger'})
   ],
   declarations: [
     AppComponent,

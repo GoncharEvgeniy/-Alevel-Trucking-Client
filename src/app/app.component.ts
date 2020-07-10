@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { LoginService } from './service/loginService';
+import {Component} from '@angular/core';
+import {LoginService} from './service/loginService';
 import {Router} from "@angular/router";
 
 @Component({
@@ -10,7 +10,8 @@ import {Router} from "@angular/router";
 })
 export class AppComponent {
 
-  constructor(public loginService: LoginService, private route: Router) { }
+  constructor(public loginService: LoginService, private route: Router) {
+  }
 
   logout() {
     this.loginService.logout();
