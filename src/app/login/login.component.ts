@@ -27,7 +27,7 @@ export class LoginComponent {
     this.loginService.login(this.logFormDto).subscribe(
       (data: HttpResponse<any>) => {
         this.loginService.setToken(data.headers.get("Authorization").substring(7));
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/home');
       },
       (error) => {
         if (error.error.error === "Unauthorized") {
